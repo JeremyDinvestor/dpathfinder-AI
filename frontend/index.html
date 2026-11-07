@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="DPathfinder AI: an AI agent that runs your customers, orders and reports from plain-language instructions." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>DPathfinder AI</title>
+    <script>
+      // Apply the saved theme before React loads, so there is no flash of the wrong theme.
+      try {
+        var t = localStorage.getItem("dpf-theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
