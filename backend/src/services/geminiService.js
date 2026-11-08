@@ -23,7 +23,11 @@ export async function generate({ contents, systemInstruction, tools }) {
 
   let timer;
   const timeout = new Promise((_, reject) => {
-    timer = setTimeout(() => reject(new Error("Gemini request timed out")), env.geminiTimeoutMs);
+    timer = setTimeout(() => {
+      const error = new Error("Gemini request timed out");
+      error.code = "AI_TIMEOUT";
+      reject(error);
+    }, env.geminiTimeoutMs);
   });
 
   try {

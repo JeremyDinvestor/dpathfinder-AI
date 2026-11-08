@@ -78,3 +78,95 @@ main{min-height:60vh}.hero{display:flex;gap:48px;align-items:center;padding:72px
 .b:disabled,.chip:disabled{opacity:.5;cursor:not-allowed}
 .chk{display:inline-flex;gap:6px;align-items:center;cursor:pointer}.chk input{width:auto;min-height:0;flex:none}
 .frm label input{margin-left:6px}
+
+/* Markdown formatting inside assistant chat messages */
+
+.md-content {
+  overflow-wrap: anywhere;
+  line-height: 1.55;
+}
+
+.md-content> :first-child {
+  margin-top: 0;
+}
+
+.md-content> :last-child {
+  margin-bottom: 0;
+}
+
+.md-paragraph {
+  margin: 0 0 12px;
+}
+
+.md-heading {
+  margin: 14px 0 8px;
+  color: var(--tx);
+  line-height: 1.3;
+}
+
+.md-heading:first-child {
+  margin-top: 0;
+}
+
+.md-list {
+  margin: 8px 0 14px;
+  padding-left: 24px;
+}
+
+.md-list li {
+  padding-left: 3px;
+  margin: 4px 0;
+}
+
+.md-quote {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-left: 3px solid var(--cy);
+  color: var(--mu);
+  background: var(--sf);
+  border-radius: 0 6px 6px 0;
+}
+
+.md-quote p {
+  margin: 0 0 6px;
+}
+
+.md-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.md-inline-code {
+  padding: 2px 5px;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  background: var(--sf);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.md-code-block {
+  margin: 10px 0;
+  padding: 12px;
+  overflow-x: auto;
+  border: 1px solid var(--bd);
+  border-radius: 6px;
+  background: var(--sf);
+  font-size: 13px;
+}
+
+.md-code-block code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre;
+}
+
+.md-rule {
+  border: 0;
+  border-top: 1px solid var(--bd);
+  margin: 12px 0;
+}
+
+.md-content a {
+  color: var(--cy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
